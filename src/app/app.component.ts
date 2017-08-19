@@ -47,7 +47,7 @@ export class AppComponent {
             this.servers=servers;
             console.log(this.servers);
           },
-           (error) => console.log(error)
+           (error) => console.log('bawwa  '+error)
         );
   }
 }
