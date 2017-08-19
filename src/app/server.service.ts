@@ -6,7 +6,13 @@ export class ServerService{
 
   storeServers(servers: any[]){
      const headers= new Headers({'Content-Type':'application/json'});
-     return this.http.post('https://http-practice-f7793.firebaseio.com/data.json',servers,
-     {headers: headers});
+    //  return this.http.post('https://http-practice-f7793.firebaseio.com/data.json',servers,
+    //  {headers: headers});
+    return this.http.put('https://http-practice-f7793.firebaseio.com/data.json',servers,
+           {headers: headers});
+  }
+
+  getServers(){
+      return this.http.get('https://http-practice-f7793.firebaseio.com/data.json');
   }
 }
