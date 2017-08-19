@@ -8,6 +8,7 @@ import { Response } from '@angular/http';
 })
 export class AppComponent {
   constructor(private service: ServerService){}
+  appName=this.service.getappName();
   servers = [
     {
       name: 'Testserver',
@@ -47,7 +48,7 @@ export class AppComponent {
             this.servers=servers;
             console.log(this.servers);
           },
-           (error) => console.log('bawwa  '+error)
+           (error) => console.log('Error: '+error)
         );
   }
 }

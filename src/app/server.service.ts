@@ -28,4 +28,14 @@ export class ServerService{
                      return Observable.throw(error);
                } );
   }
+
+  getappName(){
+      return this.http.get('https://http-practice-f7793.firebaseio.com/appName.json')
+                .map(
+                    (response:Response)=>{
+
+                      return response.json();
+                    }
+                );
+  }
 }
